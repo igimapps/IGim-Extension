@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title> Instagram Extended features </title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/tailwind.min.css" />
+    <!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> -->
+    <style>
+      body{
+        width: 500px;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="min-h-screen bg-gray-100 flex flex-col">
+      <div class="relative sm:max-w-xl sm:mx-auto">
+        <div class="relative bg-white shadow-lg sm:rounded-3xl sm:p-20 pb-6">
+          <div class="max-w-md mx-auto">
+            <div class="pt-6 text-base leading-6 font-bold sm:text-lg sm:leading-7">
+              <p class="h-7 sm:h-8"> Instagram(Feature extender): 
+              <button id="getUnfollowers" class="text-xs py-2 px-4 bg-transparent hover:bg-blue-500 text-blue-500 font-semibold hover:text-white">
+                get unfollowers
+              </button>
+            </p>
+            </div>
+            <div class="divide-y divide-gray-200">
+              <div class="py-8 text-base leading-6 space-y-4 text-gray-700 sm:text-lg sm:leading-7">
+                <ul class="list-disc space-y-2"></ul>
+              </div>
+              <p>
+                "unfollow" feature doesn't work currently </br>
+                Want to help ? Visit <a href="" class="text-xs text-blue-500 font-semibold">github repo</a> to contribute
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="popup.js" type="text/javascript"></script>
+  </body>
+</html>

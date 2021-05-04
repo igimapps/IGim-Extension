@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "instagram feature extension",
+  "version": "1.0.0",
+  "minimum_chrome_version": "89",
+  
+  "icons": {
+    "16": "instagram/app/assets/img/icon.png",
+    "32": "instagram/app/assets/img/icon.png",
+    "48": "instagram/app/assets/img/icon.png",
+    "128": "instagram/app/assets/img/icon.png"
+  },
+  "description": "",
+  "action": {
+    "default_title": "Instagram",
+    "default_popup": "instagram/app/popup.html"
+  },
+  "permissions": [
+    "cookies"
+  ],
+  "background": { "service_worker": "background.js" },
+  "host_permissions": ["*://*.instagram.com/*", "*://*.cdninstagram.com/*"]
+}
