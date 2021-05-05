@@ -1,5 +1,5 @@
+const ul = document.querySelector(".list-disc.space-y-2")
 const unfollowers = response =>{
-  const ul = document.querySelector(".list-disc.space-y-2")
   ul.innerHTML = ""
   let img = new Image;
   img.loading = "lazy";
@@ -17,7 +17,10 @@ const unfollowers = response =>{
             ${img.outerHTML}
             <div class="text-sm">
               <p class="text-gray-900 leading-none">
-                <a href="https://instagram.com/${res.username}" class="text-xs text-blue-500 font-semibold" target="_blank"> ${res.username}: ${res.full_name} <a/>
+                <a href="https://instagram.com/${res.username}" class="text-xs text-blue-500 font-semibold" target="_blank"> 
+                ${res.username} 
+                ${!!res.full_name ? `: `+ res.full_name : ""} 
+                <a/>
               </p>
             </div>
           </div>
@@ -45,6 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
   getUnfollowers.addEventListener("click", async () => {
     
     // Need to add loading/fetching feature
+    ul.innerHTML = "FETCHING"
     getUnfollowers.classList.add("opacity-50", "cursor-not-allowed");
     getUnfollowers.disabled = true;
     

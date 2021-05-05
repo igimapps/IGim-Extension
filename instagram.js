@@ -34,37 +34,10 @@ const InstagramAPI = (() => {
       _loggedIn().then( id => this.user = {id} )
     }
 
-    unfollow = async () => {
-      let id = "5779924297"
-
-      const response = await fetch(`https://www.instagram.com/web/friendships/${id}/unfollow/`, {
-        method: 'POST', // *GET, POST, PUT, DELETE, etc.
-        mode: 'cors', // no-cors, *cors, same-origin
-        cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-        credentials: 'same-origin', // include, *same-origin, omit
-        headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-          'x-ig-app-id': '936619743392459'
-
-          // 'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        //redirect: 'follow', // manual, *follow, error
-        referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-        //body: JSON.stringify(data) // body data type must match "Content-Type" header
-      });
-      console.log('response.json() :>> ', response.json());
-      // return response.json(); // parses JSON response into native JavaScript objects
-    }
-
-    follow = async () => {
-      id = "5779924297"
-      `https://www.instagram.com/web/friendships/${id}/follow/`
-    }
-
     unfollowers = async () => {
       let followers = [], followings = [] 
-      console.log('this.user.id :>> ', this.user.id);
-      if (!this.user.id) return "not signed in"
+      // console.log('this.user.id :>> ', this.user.id);
+      if (!this.user.id){return "not signed in"}
 
       try {
         let after = null, has_next = true

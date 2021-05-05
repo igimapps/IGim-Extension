@@ -9,6 +9,9 @@ const cache = {};
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if(request.action === 'getUnfollowers'){
     igClient.unfollowers().then(resp =>{
+      if(resp === 'not signed in'){
+
+      }
       Object.assign(cache, {unfollowers: resp})
       sendResponse(resp)
     })
