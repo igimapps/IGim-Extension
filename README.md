@@ -1,4 +1,4 @@
-##Google Chrome Extension: instagram feature extension.
+## Google Chrome Extension: instagram feature extension.
 
 
 ## Installation:
