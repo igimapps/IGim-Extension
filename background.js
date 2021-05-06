@@ -9,15 +9,14 @@ const cache = {};
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if(request.action === 'getUnfollowers'){
     igClient.unfollowers().then(resp =>{
-      if(resp === 'not signed in'){
-
-      }
+      // No error handling rightNow.
       Object.assign(cache, {unfollowers: resp})
       sendResponse(resp)
     })
   }
 
   if(request.action === 'unfollow'){
+    // Unfollow from the app is under construction.
     // igClient.unfollow()
     sendResponse("unfollow")
   }
