@@ -32,6 +32,6 @@ Incoming changes: Planning to use `instagram-private-api`, feel free to contribu
 
 I would love to have a help to design the app and further more features like (unfollow, dm, download a content etc...)
 
-![image_one](https://github.com/7urkm3n/instagram-feature-extension/github.com/img/image_one.png)
-
-![image_two](https://github.com/7urkm3n/instagram-feature-extension/github.com/img/image_two.png)
+![image_one](./github.com/img/image_one.png)
+___
+![image_two](./github.com/img/image_two.png)
