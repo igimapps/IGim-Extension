@@ -1,19 +1,19 @@
 {
   "manifest_version": 3,
-  "name": "instagram feature extension",
+  "name": "igim",
   "version": "1.0.0",
   "minimum_chrome_version": "89",
   
   "icons": {
-    "16": "instagram/app/assets/img/icon.png",
-    "32": "instagram/app/assets/img/icon.png",
-    "48": "instagram/app/assets/img/icon.png",
-    "128": "instagram/app/assets/img/icon.png"
+    "16": "igdm/app/assets/img/logo_128x128.png",
+    "32": "igdm/app/assets/img/logo_128x128.png",
+    "48": "igdm/app/assets/img/logo_128x128.png",
+    "128": "igdm/app/assets/img/logo_128x128.png"
   },
   "description": "",
   "action": {
-    "default_title": "Instagram",
-    "default_popup": "instagram/app/popup.html"
+    "default_title": "igdm",
+    "default_popup": "igdm/app/popup.html"
   },
   "permissions": [
     "cookies"
