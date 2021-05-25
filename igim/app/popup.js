@@ -31,6 +31,7 @@ const unfollowers = response =>{
 }
 
 document.addEventListener('DOMContentLoaded', function () {
+  chrome.action.setBadgeText({text: ""})
 
   chrome.runtime.sendMessage({action: "unfollowersCache"}, response => {
     if(!!response) unfollowers(response)

@@ -1,4 +1,4 @@
-## igim: instagram feature extension.
+## IGim: instagram feature extension.
 
 
 ## Installation:

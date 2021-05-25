@@ -1,28 +1,28 @@
 try {
-  importScripts('instagram.js');
+  importScripts('instagram.js', 'notification.js');
 } catch (e) {
   console.error("err importScripts: ", e);
 }
 const igClient = InstagramAPI.new();
-const cache = {};
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
   if(request.action === 'getUnfollowers'){
-    igClient.unfollowers().then(resp =>{
+    igClient.unfollowers().then(resp => {
       // No error handling rightNow.
-      Object.assign(cache, {unfollowers: resp})
-      sendResponse(resp)
+      chrome.storage.local.set({unfollowers: JSON.stringify(resp)}, () => {
+        createNotification("Request Done", "unfollowers list ready")
+        chrome.action.setBadgeText({text: "1"})
+        chrome.action.setBadgeBackgroundColor({color: "red"})
+        sendResponse(resp)
+      })
     })
   }
 
-  if(request.action === 'unfollow'){
-    // Unfollow from the app is under construction.
-    // igClient.unfollow()
-    sendResponse("unfollow")
-  }
-
   if(request.action === 'unfollowersCache'){
-    sendResponse(cache.unfollowers)
+    chrome.storage.local.get(['unfollowers'], result => {
+      sendResponse(JSON.parse(result.unfollowers) || [])
+    })
   }
   return true
 });
+

@@ -1,22 +1,24 @@
 {
   "manifest_version": 3,
-  "name": "igim",
-  "version": "1.0.0",
+  "name": "IGim",
+  "version": "1.0.1",
   "minimum_chrome_version": "89",
   
   "icons": {
-    "16": "igdm/app/assets/img/logo_128x128.png",
-    "32": "igdm/app/assets/img/logo_128x128.png",
-    "48": "igdm/app/assets/img/logo_128x128.png",
-    "128": "igdm/app/assets/img/logo_128x128.png"
+    "16": "igim/app/assets/img/logo_128x128.png",
+    "32": "igim/app/assets/img/logo_128x128.png",
+    "48": "igim/app/assets/img/logo_128x128.png",
+    "128": "igim/app/assets/img/logo_128x128.png"
   },
   "description": "",
   "action": {
-    "default_title": "igdm",
-    "default_popup": "igdm/app/popup.html"
+    "default_title": "IGim",
+    "default_popup": "igim/app/popup.html"
   },
   "permissions": [
-    "cookies"
+    "cookies",
+    "storage",
+    "notifications"
   ],
   "background": { "service_worker": "background.js" },
   "host_permissions": ["*://*.instagram.com/*", "*://*.cdninstagram.com/*"]
