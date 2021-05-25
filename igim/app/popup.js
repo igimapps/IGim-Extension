@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
   getUnfollowers.addEventListener("click", async () => {
     
     // Need to add loading/fetching feature
-    ul.innerHTML = "FETCHING"
+    ul.innerHTML = "<p style='text-align: center'>Loading unfollowers <br/> It may take long, if users list big.</p>"
     getUnfollowers.classList.add("opacity-50", "cursor-not-allowed");
     getUnfollowers.disabled = true;
     
