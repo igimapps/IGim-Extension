@@ -1,5 +1,5 @@
 try {
-  importScripts('instagram.js', 'notification.js');
+  importScripts('igim/lib/instagram.js', 'igim/lib/notification.js');
 } catch (e) {
   console.error("err importScripts: ", e);
 }
