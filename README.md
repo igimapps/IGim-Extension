@@ -9,7 +9,7 @@ This `extension` had been submitted to google extension store to publish, its un
 
 
 #### Git Clone:
-1) `git clone https://github.com/7urkm3n/igim`
+1) `git clone https://github.com/igimapps/IGim-Extension`
 2) Go to `chrome://extensions/`
 3) Toggle `Developer mode`, right top corner.
 4) Click `Load unpacked`
